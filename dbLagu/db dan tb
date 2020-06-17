@@ -1,0 +1,22 @@
+CREATE DATABASE db_lagu
+
+CREATE TABLE album (
+kode_album CHAR (4), judul VARCHAR (30),
+penyanyi VARCHAR (30), harga INT (9), stok INT (9),
+PRIMARY KEY (kode_album)
+);
+
+CREATE TABLE penjualan(
+kode_penjualan CHAR (4), tanggal DATE,
+total INT (9),
+PRIMARY KEY (kode_penjualan)
+);
+
+CREATE TABLE detail_penjualan(
+id_detail CHAR (4), kode_penjualan CHAR (4), 
+kode_album CHAR (4),
+jumlah INT (9), harga INT (9),
+PRIMARY KEY (id_detail),
+FOREIGN KEY (kode_penjualan) REFERENCES penjualan (kode_penjualan),
+FOREIGN KEY (kode_album) REFERENCES album (kode_album)
+);
