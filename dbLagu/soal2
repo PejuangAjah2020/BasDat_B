@@ -1,0 +1,20 @@
+SELECT * FROM album;
+SELECT * FROM penjualan;
+SELECT * FROM detail_penjualan;
+
+SET FOREIGN_KEY_CHECKS=0;
+DELETE FROM penjualan
+WHERE total < '75000';
+SET FOREIGN_KEY_CHECKS=1;
+
+SELECT judul, penyanyi, COUNT(jumlah) AS Jumlah_Quantity
+FROM album RIGHT JOIN detail_penjualan
+USING (kode_album)
+GROUP BY judul;
+
+SELECT judul, penyanyi, jumlah AS Quantity
+FROM album LEFT JOIN detail_penjualan
+USING (kode_album)
+
+SELECT * FROM detail_penjualan
+ORDER BY 

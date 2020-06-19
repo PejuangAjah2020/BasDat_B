@@ -1,10 +1,6 @@
-SELECT * FROM album;
-SELECT * FROM penjualan;
-SELECT * FROM detail_penjualan;
-
 INSERT INTO album (kode_album,judul,penyanyi,harga,stok) VALUES
 ('A-01','Valley Of Neptune','Jimi Hendrix','25000','0'),
-('A-02','Here I am','Jimi Hendrix','50000','0'),
+('A-02','Here I am','Marvin Sapp','50000','0'),
 ('A-03','The self Healing Series - Breathing- The Master Key To Self Healing','Andrew Weil','100000','0'),
 ('A-04','Machine Head','Deep Purple','50000','0'),
 ('A-05','Still Standing','Monica','75000','0');
@@ -14,7 +10,7 @@ INSERT INTO penjualan (kode_penjualan, tanggal, total) VALUES
 ('P-02','2010-04-21','100000'),
 ('P-03','2010-04-23','275000');
 
-INSERT INTO detail_penjualan (id_detail,kode_penjualan,kode_album,jumlah,harga)VALUES
+INSERT INTO detail_penjualan (kode_detail,kode_penjualan,kode_album,jumlah,harga)VALUES
 ('F-01','P-01','A-04','2','50000'),
 ('F-02','P-01','A-03','2','100000'),
 ('F-03','P-02','A-03','1','100000'),

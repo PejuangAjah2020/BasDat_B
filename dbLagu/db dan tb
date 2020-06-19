@@ -1,7 +1,7 @@
-CREATE DATABASE db_lagu
+CREATE DATABASE db_lagu;
 
 CREATE TABLE album (
-kode_album CHAR (4), judul VARCHAR (30),
+kode_album CHAR (4), judul VARCHAR (80),
 penyanyi VARCHAR (30), harga INT (9), stok INT (9),
 PRIMARY KEY (kode_album)
 );
@@ -13,7 +13,7 @@ PRIMARY KEY (kode_penjualan)
 );
 
 CREATE TABLE detail_penjualan(
-id_detail CHAR (4), kode_penjualan CHAR (4), 
+id_detail CHAR (4), kode_penjualan CHAR (4),
 kode_album CHAR (4),
 jumlah INT (9), harga INT (9),
 PRIMARY KEY (id_detail),

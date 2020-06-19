@@ -1,4 +1,4 @@
-INSERT INTO detail_penjualan (id_detail,kode_penjualan,kode_album,jumlah,harga)VALUES
+INSERT INTO detail_penjualan (kode_detail,kode_penjualan,kode_album,jumlah,harga)VALUES
 ('F-07','P-04','A-02','1','50000'),
 ('F-08','P-05','A-02','1','50000'),
 ('F-09','P-06','A-02','1','50000'),
